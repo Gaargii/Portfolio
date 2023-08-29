@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio Website </title> <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+<div id="header">
+<div class="container">
+    <nav>
+        <div class="logo">
+    <img src="images/logo.png" class="logo">
+</div>
+    <ul id="sidemenu">
+    <li><a href="#header">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#portfolio">Project</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <div class="icons">
+       <i class="fas fa-times" onclick="closemenu()"></i>
+       </ul>
+       <i class="fas fa-bars" onclick="openmenu()" class="menu"></i>
+    </div>
+    </nav>
+    <div class="header-text">
+    <h1>Hi , I'm <span>Gargi</span><br></h1>
+    <p><br>Aspiring Computer Science Student | Passionate about Web Development | Seeking Freshers Role</p>
+    </div>
+    </div>
+</div>
+
+<!-----------------------------------------about------------------------------>
+<div id="about">
+<div class="container">
+<div class="row">
+<div class="about-col-1">
+<img src="images/user.png">
+</div>
+<div class="about-col-2">
+<h1 class="sub-title">About Me</h1>
+<p>I'm MCA student with a strong passion for coding in Java and a keen interest in web development. </p>
+<div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+    <p class="tab-links" onclick="opentab('education')">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id="skills">
+    <ul>
+    <li><span>HTML</span></li>
+    <li><span>CSS</span></li>
+        <li><span>JavaScript</span></li>
+            <li><span>ReactJs</span></li>
+                <li><span>ExpressJs</span></li>
+                    <li><span>Java</span></li>
+                        <li><span>DSA</span></li>
+                            <li><span>MongoDB</span></li>      
+    
+    </ul>
+    </div>
+    <div class="tab-contents" id="education">
+        <ul>
+        <li><span>2022-2022</span><br>MCA from Guru Ghashidas University.</li>
+        <li><span>2019-2022</span><br>BCACS from Jharkhand Raksha Shakti University</li> 
+        </ul>
+        </div>
+    </div>
+</div>
+
+<div>
+
+
+    <!------------------------------------------Project---------------------------------->
+    <div id="portfolio">
+        <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+        <div class="work">
+        <img src="images/work-1.png">
+        <div class="layer">
+        
+        <h3>Garbage Collector</h3>
+        
+        <p>It is a simple app in which the user uploads
+            photo of dirty place with location and admin
+            gets it cleaned</p>
+        
+        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        </div>
+        <div class="work">
+            <img src="images/work-2.png">
+        <div class="layer">
+        
+        <h3>Netflix Clone</h3>
+        
+        <p>A simple website having similar homepage
+            that of Netflix using using HTML and
+            CSS.</p>
+        
+        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        </div>
+        <div class="work">
+            <img src="images/work-3.png">
+        <div class="layer">
+        
+        <h3>ToDo List</h3>
+        
+        <p>It is an application specially built to keep track 
+            of errands or tasks that need to be done.</p>
+        
+        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+        </div>
+        </div>
+
+        <!----------------------------------------------contact------------------------>
+        <div id="contact">
+<div class="container"> <div class="row">
+<div class="contact-left">
+
+
+<h5 class="sub-title">Contact Me</h5>
+    <p><i class="far fa-envelope"></i>gargi3008@gmail.com</p>
+    <p><i class="fas fa-phone-square-alt"></i>8434416160</p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/gargi-kumari-7662a8204/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Gaargii"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/gargi__rai/"><i class="fab fa-instagram"></i></a>
+
+  </div>
+  <div id="resume">
+       <a href="images/Gargi_resume.pdf" download class="btn btn2">Download Resume</a>
+    </div>
+   </div>
+   <div class="contact-right">
+   <form>
+    <input type="text" name="Name" placeholder="Your Name" required> 
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <textarea name="Message" rows="6" placeholder="Your Message"></textarea> 
+    <button type="submit" class="btn btn2">Submit</button>
+    </form>
+    </div>
+    </div>
+      </div>
+   <div class="copyright">
+        <p><i class="fas fa-heart"></i>Thanks for visiting</p>
+     </div>
+        </div>
+
+
+
+
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){ 
+    for (tablink of tablinks)
+    { 
+        tablink.classList.remove("active-link");
+}
+for(tabcontent of tabcontents){
+tabcontent.classList.remove("active-tab");
+}
+event.currentTarget.classList.add("active-link"); 
+document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+</body>
+</html>
